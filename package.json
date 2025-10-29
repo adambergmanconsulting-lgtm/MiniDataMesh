@@ -9,6 +9,7 @@
     "dev:windows": "scripts\\dev-setup.bat",
     "dev:powershell": "powershell -ExecutionPolicy Bypass -File scripts\\dev-setup.ps1",
     "build": "vite build",
+    "show:dist": "node -e \"const fs=require('fs'),p=require('path');function w(d){for(const f of fs.readdirSync(d)){const x=p.join(d,f);const s=fs.statSync(x);console.log((s.isDirectory()?'[D] ':'[F] ')+x);if(s.isDirectory())w(x)}}w('dist')\"",
     "lint": "eslint .",
     "preview": "vite preview"
   },

@@ -2,7 +2,10 @@
 export default {
   content: [
     './index.html',
-    './src/**/*.{js,ts,jsx,tsx}',   // covers pages, components, charts, etc.
+    './src/**/*.{js,ts,jsx,tsx,html}',
+    './components/**/*.{js,ts,jsx,tsx,html}',
+    './app/**/*.{js,ts,jsx,tsx,html}',
+    './pages/**/*.{js,ts,jsx,tsx,html}',
   ],
   theme: {
     extend: {
@@ -35,10 +38,15 @@ export default {
     },
   },
   plugins: [],
-  // Safelist for dynamic class names and commonly used utilities
+  // Keep any dynamic classes that Tailwind can't see at build time
   safelist: [
-    // Color patterns for dynamic classes
+    // Grid patterns
+    { pattern: /(grid|grid-cols|col-span|row-span)-\d+/ },
+    // Sizes like w-*, h-*
+    { pattern: /^(w|h|min-w|min-h|max-w|max-h)-.+/ },
+    // Colors you build dynamically e.g. `text-${color}-600`
     { pattern: /(bg|text|border)-(slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(50|100|200|300|400|500|600|700|800|900)/ },
+    // Fill and stroke patterns
     { pattern: /(fill|stroke)-(current|none)/ },
     // Common utility classes used in components
     'grid', 'grid-cols-1', 'grid-cols-2', 'grid-cols-3', 'grid-cols-4',
