@@ -1,7 +1,4 @@
-/* Custom CSS file with explicit Tailwind utilities */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+/* Custom CSS file with explicit utilities - bypassing Tailwind */
 
 /* Force include specific classes that might be getting purged */
 .flex { display: flex; }
