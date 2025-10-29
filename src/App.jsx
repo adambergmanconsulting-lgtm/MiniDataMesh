@@ -3,7 +3,12 @@ import Dashboard from './components/Dashboard'
 import DataCatalog from './components/DataCatalog'
 import DataLineage from './components/DataLineage'
 import DataQuality from './components/DataQuality'
-import { Database, GitBranch, Shield, BarChart3 } from 'lucide-react'
+import DeltaLake from './components/DeltaLake'
+import DatabricksSQL from './components/DatabricksSQL'
+import DatabricksWorkflows from './components/DatabricksWorkflows'
+import MLflow from './components/MLflow'
+import UnityCatalog from './components/UnityCatalog'
+import { Database, GitBranch, Shield, BarChart3, Layers, Zap, Brain, Settings } from 'lucide-react'
 
 function App() {
   const [activeTab, setActiveTab] = useState('dashboard')
@@ -13,6 +18,11 @@ function App() {
     { id: 'catalog', label: 'Data Catalog', icon: Database },
     { id: 'lineage', label: 'Data Lineage', icon: GitBranch },
     { id: 'quality', label: 'Data Quality', icon: Shield },
+    { id: 'delta', label: 'Delta Lake', icon: Layers },
+    { id: 'sql', label: 'Databricks SQL', icon: Zap },
+    { id: 'workflows', label: 'Workflows', icon: Settings },
+    { id: 'mlflow', label: 'MLflow', icon: Brain },
+    { id: 'unity', label: 'Unity Catalog', icon: Shield },
   ]
 
   const renderContent = () => {
@@ -25,6 +35,16 @@ function App() {
         return <DataLineage />
       case 'quality':
         return <DataQuality />
+      case 'delta':
+        return <DeltaLake />
+      case 'sql':
+        return <DatabricksSQL />
+      case 'workflows':
+        return <DatabricksWorkflows />
+      case 'mlflow':
+        return <MLflow />
+      case 'unity':
+        return <UnityCatalog />
       default:
         return <Dashboard />
     }

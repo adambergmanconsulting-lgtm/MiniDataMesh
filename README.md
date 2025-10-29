@@ -1,6 +1,6 @@
 # MiniDataMesh - Data Mesh Platform Demo
 
-A modern, interactive demonstration of data mesh principles built with React and modern web technologies. This demo showcases key concepts of data mesh architecture including data cataloging, lineage visualization, and quality monitoring.
+A modern, interactive demonstration of data mesh principles built with React and modern web technologies. This demo showcases key concepts of data mesh architecture including data cataloging, lineage visualization, quality monitoring, and **authentic Databricks integration** with Delta Lake, MLflow, Unity Catalog, and Databricks SQL.
 
 [![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-View_Now-blue?style=for-the-badge)](https://vercel.com/adambergmanconsulting-lgtms-projects/mini-data-mesh)
 
@@ -33,6 +33,36 @@ A modern, interactive demonstration of data mesh principles built with React and
 - Real-time quality monitoring
 - Trend analysis and alerts
 - Source-specific quality scores
+
+### 🧱 **Delta Lake Integration**
+- Live Delta table metadata
+- Schema evolution tracking
+- Version history and freshness
+- Real-time table statistics
+
+### 📊 **Databricks SQL**
+- Live query performance metrics
+- SQL warehouse monitoring
+- Query history and analytics
+- REST API integration status
+
+### ⚙️ **Databricks Workflows**
+- Job run monitoring and status
+- Success rate analytics
+- Performance metrics
+- Automated pipeline health
+
+### 🧠 **MLflow Model Management**
+- Model registry and versioning
+- Experiment tracking
+- Performance metrics
+- Model lifecycle management
+
+### 🗂️ **Unity Catalog**
+- Data governance and lineage
+- Access control and permissions
+- Data classification and sensitivity
+- Compliance and audit tracking
 
 ## 🛠️ Technology Stack
 
