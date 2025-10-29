@@ -3,6 +3,13 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+    "./src/services/**/*.{js,ts,jsx,tsx}",
+  ],
+  // Disable purge for now to ensure all styles are included
+  safelist: [
+    // Include all possible classes to prevent purging
+    { pattern: /.*/ }
   ],
   theme: {
     extend: {
