@@ -1,15 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
-    "./src/services/**/*.{js,ts,jsx,tsx}",
-  ],
-  // Disable purge for now to ensure all styles are included
-  safelist: [
-    // Include all possible classes to prevent purging
-    { pattern: /.*/ }
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',   // covers pages, components, charts, etc.
   ],
   theme: {
     extend: {
@@ -42,4 +35,21 @@ export default {
     },
   },
   plugins: [],
+  // Safelist for dynamic class names and commonly used utilities
+  safelist: [
+    // Color patterns for dynamic classes
+    { pattern: /(bg|text|border)-(slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(50|100|200|300|400|500|600|700|800|900)/ },
+    { pattern: /(fill|stroke)-(current|none)/ },
+    // Common utility classes used in components
+    'grid', 'grid-cols-1', 'grid-cols-2', 'grid-cols-3', 'grid-cols-4',
+    'md:grid-cols-2', 'md:grid-cols-3', 'md:grid-cols-4',
+    'lg:grid-cols-2', 'lg:grid-cols-3', 'lg:grid-cols-4',
+    'w-1/2', 'w-1/3', 'w-2/3', 'w-1/4', 'w-3/4', 'w-full',
+    'h-64', 'h-96', 'h-screen', 'min-h-screen',
+    // Status classes
+    'status-good', 'status-warning', 'status-error',
+    'btn-primary', 'btn-secondary',
+    // Chart and visualization classes
+    'w-16', 'h-2', 'bg-green-500', 'bg-blue-500', 'bg-purple-500', 'bg-yellow-500', 'bg-red-500', 'bg-cyan-500', 'bg-lime-500',
+  ],
 }
