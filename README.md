@@ -2,9 +2,11 @@
 
 A modern, interactive demonstration of data mesh principles built with React and modern web technologies. This demo showcases key concepts of data mesh architecture including data cataloging, lineage visualization, and quality monitoring.
 
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-View_Now-blue?style=for-the-badge)](https://vercel.com/adambergmanconsulting-lgtms-projects/mini-data-mesh)
+
 ## 🚀 Live Demo
 
-[View Live Demo](https://minidatamesh.vercel.app) (Deploy to see the link)
+**[🎯 Try the Interactive Demo](https://vercel.com/adambergmanconsulting-lgtms-projects/mini-data-mesh)** - Experience the full data mesh platform with real-time metrics, interactive visualizations, and comprehensive data management tools.
 
 ## 🎯 Features
 
@@ -120,6 +122,8 @@ src/
 ## 🚀 Deployment
 
 ### Deploy to Vercel (Recommended)
+
+**🎉 Already Deployed!** [View Live Demo](https://vercel.com/adambergmanconsulting-lgtms-projects/mini-data-mesh)
 
 1. **Install Vercel CLI**
    ```bash
